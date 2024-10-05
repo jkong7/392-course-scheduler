@@ -2,9 +2,10 @@ import React from 'react';
 import '../styles/courseList.css';
 
 
-const CourseList = ({ courses }) => (
+const CourseList = ({ courses, selectedTerm }) => (
     <div className="course-grid">
-      {Object.entries(courses).map(([id, course]) => (
+      {Object.entries(courses).filter(([id, course]) => (course.term===selectedTerm))
+      .map(([id, course]) => (
         <div key={id} className="course-card">
           <strong className='course-name'>{course.term} CS {course.number}</strong>
           <p className='course-title'>{course.title}</p>
@@ -13,7 +14,6 @@ const CourseList = ({ courses }) => (
       ))}
     </div>
   );
-  
   
   
 export default CourseList;

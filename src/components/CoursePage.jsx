@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from './Banner';
+import TermPage from './TermPage'; 
 import useJsonQuery from '../utilities/useJsonQuery';
-import CourseList from './CourseList';
 
 const CoursePage = () => {
   const [data, isLoading, error] = useJsonQuery('https://courses.cs.northwestern.edu/394/guides/data/cs-courses.php');
@@ -13,7 +13,7 @@ const CoursePage = () => {
   return (
     <div>
       <Banner title={data.title} />
-      <CourseList courses={data.courses} />
+      <TermPage courses={data.courses} />
     </div>
   );
 };
