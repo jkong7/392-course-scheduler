@@ -15,6 +15,13 @@
     justify-content: space-between; 
     height: 200px; 
     padding: 0 20px;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease; 
+  }
+
+  .course-card.active {
+    background-color: #f0f8ff;  
+    border-color: #007bff;      
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2); 
   }
   
   .course-name {

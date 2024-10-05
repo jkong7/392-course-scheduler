@@ -1,5 +1,4 @@
-import React from 'react'; 
-import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query';
+import { useQuery } from '@tanstack/react-query';
 
 const fetchJson = async (url) => {
     const response = await fetch(url); 
