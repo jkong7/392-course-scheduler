@@ -1,9 +1,8 @@
-import React, { useState } from 'react'; 
+import React from 'react'; 
 import '../styles/CourseList.css';
 
 
-const CourseList = ({ courses, selectedTerm }) => {
-  const [classes, setClasses] = useState({}); 
+const CourseList = ({ courses, selectedTerm, classes, setClasses }) => {
   const RemoveClass = (id) => {
     setClasses(
       prevClasses => {
@@ -17,6 +16,7 @@ const CourseList = ({ courses, selectedTerm }) => {
   const AddClass = (id) => {
     setClasses(
       prevClasses => {
+        console.log(`Adding class with id: ${id}`); // Debug log
         return {
           ...prevClasses, 
           [id]: true
@@ -39,6 +39,4 @@ const CourseList = ({ courses, selectedTerm }) => {
   );
 }
 
-
 export default CourseList;
-  
