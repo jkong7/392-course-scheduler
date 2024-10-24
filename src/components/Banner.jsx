@@ -1,7 +1,11 @@
-import React from 'react'; 
+import React, { useContext } from 'react'; 
+import { AppContext } from '../context/AppContext';
 
-const Banner = ({ title }) => (
-    <h1>{ title }</h1>
-); 
+const Banner = () => {
+    const { title } = useContext(AppContext); 
+    return (
+        <h1>{title}</h1>
+    )
+}
 
 export default Banner; 

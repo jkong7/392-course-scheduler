@@ -1,34 +1,85 @@
+/* SchedulePopUp.css */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  z-index: 999; /* Ensure it's on top of other elements */
+}
+
 .main {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 400px;
-    margin: 20px auto;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  .title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: center;
-  }
-  
-  .course-item {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    margin: 10px 0;
-  }
-  
-  .course-item strong {
-    font-size: 1.1rem;
-    display: block;
-    margin-bottom: 5px;
-  }
-  
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  width: 90%; /* Make it responsive */
+  margin: 0; /* Remove margin */
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.course-item {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin: 10px 0;
+}
+
+.course-item strong {
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+.term-selector {
+  display: flex;
+  justify-content: space-between; /* Space between term buttons and course button */
+  align-items: center; /* Aligns items vertically in the center */
+  margin-bottom: 20px; /* Adjust as necessary for spacing */
+}
+
+
+.term-buttons {
+  display: flex; /* Keep term buttons together */
+}
+
+.term-buttons button,
+.course-plan-button {
+  padding: 10px 15px; /* Consistent padding for all buttons */
+  border: 1px solid #ccc; /* Add border to all buttons */
+  border-radius: 5px; /* Rounded corners */
+  background-color: white; /* Match background color to other buttons */
+  color: #333; /* Text color for better contrast */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, border-color 0.3s; /* Transition for hover effect */
+}
+
+.term-buttons button:hover,
+.course-plan-button:hover {
+  background-color: #f0f0f0; /* Subtle gray on hover */
+}
+
+.term-buttons button.active,
+.course-plan-button.active {
+  background-color: #007bff; /* Active button background color */
+  color: white; /* White text for active state */
+}
+
+/* Specific styles for the Course Plan button to remove the top border */
+.course-plan-button {
+  border-top: none; /* Remove the top border */
+}
